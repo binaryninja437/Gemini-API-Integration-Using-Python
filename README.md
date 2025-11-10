@@ -70,3 +70,14 @@ Just one library to install:
 
 ```bash
 pip install google-genai
+
+## Setting Things Up
+from google import genai
+from google.genai import types
+from google.colab import userdata
+
+# Grab your API key
+GOOGLE_API_KEY = userdata.get('GOOGLE_API_KEY')
+
+# Start the client
+client = genai.Client(api_key=GOOGLE_API_KEY)
